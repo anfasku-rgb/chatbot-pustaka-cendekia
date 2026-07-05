@@ -12,6 +12,16 @@ st.set_page_config(
 # Gaya CSS Khusus untuk memberikan estetika profesional yang serasi dengan Logo Perpus.png (Oranye & Emas)
 st.markdown("""
     <style>
+    /* Styling Sidebar Sebelah Kiri */
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #ffe0b2 0%, #ffb74d 100%) !important;
+    }
+    
+    /* Mengatur transparansi konten dalam sidebar agar gradasi oranye terlihat maksimal */
+    [data-testid="stSidebar"] .stVerticalBlock {
+        background-color: transparent !important;
+    }
+
     /* Styling Header Sekolah */
     .school-header-container {
         display: flex;
@@ -181,4 +191,5 @@ if user_input := st.chat_input("Tanyakan sesuatu seputar perpustakaan atau pelaj
             
         except Exception as e:
             response_placeholder.empty()
+            st.error(f"Sistem mengalami gangguan teknis: {e}")
             st.error(f"Sistem mengalami gangguan teknis: {e}")
