@@ -22,7 +22,7 @@ if api_key:
     genai.configure(api_key=api_key)
     
     # Menggunakan model Gemini terbaru yang stabil untuk teks
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash")
 
     # 3. Inisialisasi Riwayat Obrolan (Session State)
     if "messages" not in st.session_state:
