@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 import os
-from dotenv import load_load # Jika nanti menggunakan file .env lokal
+from dotenv import load_dotenv # Jika nanti menggunakan file .env lokal
 
 # 1. Konfigurasi Halaman Streamlit (Mobile-Friendly)
 st.set_page_config(
